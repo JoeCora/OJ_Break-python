@@ -2,15 +2,16 @@
 
 from __future__ import print_function
 
-import urllib
 import json
 import inspect
 
 # Python version-dependent imports
 try:
 	import urllib.request as urllib2
+	from urllib.parse import urlencode
 except ImportError:
 	import urllib2
+	from urllib import urlencode
 
 # OJ_Break class
 class OJ_Break(object):
@@ -321,7 +322,7 @@ class OJ_Break(object):
 				api_parameters[param_key] = 'N'
 		
 		# Encode parameters and send request
-		api_parameters = urllib.urlencode(api_parameters)
+		api_parameters = urlencode(api_parameters)
 		
 		db_req = urllib2.Request('http://xbiod.osu.edu/OJ_Break/' + api_call, api_parameters)
 		db_resp = urllib2.urlopen(db_req)
