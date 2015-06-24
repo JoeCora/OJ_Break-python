@@ -11,7 +11,12 @@ dictionary that has the same structure and naming as the original data.
 - xBio:D user account w/ API key activated
 
 # Installation
-TODO
+The easiest way to install the OJ_Break API wrapper is through the *pip* package
+.management system for Python.
+
+```
+pip install oj_break
+```
 
 # Usage
 To use the python wrapper for the API, load the OJ_Break API wrapper and instantiate
@@ -43,6 +48,7 @@ The *taxon_spms* variable would look like this:
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(taxon_spms)
+
 '''Pretty Print Output
 {   u'code': 100,
     u'data': {   u'general': {   u'guid': u'http://bioguid.osu.edu/xbiod_concepts/307515',
