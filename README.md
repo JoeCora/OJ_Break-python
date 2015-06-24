@@ -7,7 +7,7 @@ the xBio:D ecosystem. The wrapper converts the API result into a Python
 dictionary that has the same structure and naming as the original data.
 
 # Version
-0.1.1 - released 24-Jun-2015
+0.1.1	*released 24-Jun-2015*
 
 # Requirements
 - Python 2.7+
