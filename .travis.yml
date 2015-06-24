@@ -8,4 +8,4 @@ python:
 # command to install
 install: "pip install ."
 # command to run tests
-script: python oj_break/api.py
+script: python oj_break/api.py FBF57A9F7A666FC0E0430100007F0CDC
