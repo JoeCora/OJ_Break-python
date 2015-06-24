@@ -1,5 +1,7 @@
 ﻿# -*- coding: utf-8 -*-
 
+from __future__ import print_function
+
 import urllib
 import urllib2
 import json
@@ -340,7 +342,7 @@ if __name__ == '__main__':
 	try:
 		api_key = sys.argv[1:2][0]
 	except:
-		print 'Failure getting command line argument'
+		print('Failure getting command line argument')
 	
 	# Create local color class for testing
 	class __ColorChars:
@@ -356,10 +358,10 @@ if __name__ == '__main__':
 		END = '\033[0m'
 	
 	# Show testing preamble
-	print
-	print
-	print '=== OJ_BREAK API TEST ==='
-	print
+	print()
+	print()
+	print('=== OJ_BREAK API TEST ===')
+	print()
 	
 	# Create OJ_Break object using API key from command line
 	api = OJ_Break(api_key)
@@ -426,29 +428,35 @@ if __name__ == '__main__':
 			test_data = call(**params)
 		except BaseException as e:
 			# Execution failure
-			print '{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, __ColorChars.RED + 'FAILED [' + str(e) + ']' + __ColorChars.END, str(call_count) + '/' + str(len(testing)))
+			print('{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, __ColorChars.RED + 'FAILED [' + str(e) + ']' + __ColorChars.END, str(call_count) + '/' + str(len(testing))))
 			
 			error_count += 1
 		else:
 			if test_data['code'] > 100:
 				# API failure
-				print '{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, __ColorChars.RED + 'FAILED [API Code: ' + str(test_data['code']) + ']' + __ColorChars.END, str(call_count) + '/' + str(len(testing)))
+				print('{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, __ColorChars.RED + 'FAILED [API Code: ' + str(test_data['code']) + ']' + __ColorChars.END, str(call_count) + '/' + str(len(testing))))
 				
 				error_count += 1
 			else:
 				# Success
-				print '{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, 'PASSED', str(call_count) + '/' + str(len(testing)))
+				print('{2:<7} {0:<50}{1}'.format(__ColorChars.BOLD + call.func_name + __ColorChars.END, 'PASSED', str(call_count) + '/' + str(len(testing))))
 				
 				passed_count += 1
 		
 		call_count += 1
 	
-	print
+	print()
 	
 	# Output the final testing results
 	if error_count > 0:
-		print 'Testing Results: ' + __ColorChars.RED + __ColorChars.BOLD + 'FAILED' + __ColorChars.END + ' (' + str(error_count) + ' calls)' + __ColorChars.END
+		print('Testing Results: ' + __ColorChars.RED + __ColorChars.BOLD + 'FAILED' + __ColorChars.END + ' (' + str(error_count) + ' calls)' + __ColorChars.END)
+		print()
+		
+		# Error exit
+		sys.exit(1)
 	else:
-		print 'Testing Results: ' + __ColorChars.BOLD + 'PASSED' + __ColorChars.END
-	
-	print
+		print('Testing Results: ' + __ColorChars.BOLD + 'PASSED' + __ColorChars.END)
+		print()
+		
+		# Success exit
+		sys.exit()
