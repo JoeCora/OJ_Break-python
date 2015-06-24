@@ -10,5 +10,5 @@ setup(
 	url = 'https://github.com/JoeCora/OJ_Break-python',
 	download_url = 'https://github.com/JoeCora/OJ_Break-python/tarball/0.1',
 	keywords = ['xBio:D', 'biodiversity', 'informatics', 'taxonomy', 'species'],
-	classifiers = [],
+	classifiers = ['Development Status :: 5 - Production/Stable', 'Programming Language :: Python :: 2.7', 'Topic :: Scientific/Engineering :: Bio-Informatics'],
 )
