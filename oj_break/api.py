@@ -321,10 +321,11 @@ class OJ_Break(object):
 			elif param_value is False:
 				api_parameters[param_key] = 'N'
 		
-		# Encode parameters and send request
+		# Encode parameters, convert to binary, and send request
 		api_parameters = urlencode(api_parameters)
+		encoded_api_params = api_parameters.encode('utf-8')
 		
-		db_req = urllib2.Request('http://xbiod.osu.edu/OJ_Break/' + api_call, api_parameters)
+		db_req = urllib2.Request('http://xbiod.osu.edu/OJ_Break/' + api_call, encoded_api_params)
 		db_resp = urllib2.urlopen(db_req)
 		
 		json_resp = db_resp.read()
