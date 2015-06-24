@@ -34,7 +34,8 @@ hierarchy, then get five occurrence records for the tribe in which the species b
 ```python
 search_results = api.search.getTaxaFromText('Eucoila hunteri')
 taxon_hier = api.taxon.getTaxonHierarchy(search_results['data']['taxa'][0]['tnuid'])
-taxon_spms = api.taxon.getTaxonOccurrences(taxon_hier['data']['hier']['Tribe']['tnuid'], limit=5, show_children=True)
+taxon_spms = api.taxon.getTaxonOccurrences(taxon_hier['data']['hier']['Tribe']['tnuid'],
+		limit=5, show_children=True)
 ```
 
 The *taxon_spms* variable would look like this:
@@ -42,7 +43,7 @@ The *taxon_spms* variable would look like this:
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(taxon_spms)
-'''
+'''Pretty Print Output
 {   u'code': 100,
     u'data': {   u'general': {   u'guid': u'http://bioguid.osu.edu/xbiod_concepts/307515',
                                  u'taxon': u'Diglyphosematini',
