@@ -3,9 +3,14 @@
 from __future__ import print_function
 
 import urllib
-import urllib2
 import json
 import inspect
+
+# Python version-dependent imports
+try:
+	import urllib.request as urllib2
+except ImportError:
+	import urllib2
 
 # OJ_Break class
 class OJ_Break(object):
