@@ -12,7 +12,7 @@ dictionary that has the same structure and naming as the original data.
 
 # Installation
 The easiest way to install the OJ_Break API wrapper is through the *pip* package
-.management system for Python.
+management system for Python.
 
 ```
 pip install oj_break
