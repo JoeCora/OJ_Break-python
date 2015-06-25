@@ -7,7 +7,19 @@ the xBio:D ecosystem. The wrapper converts the API result into a Python
 dictionary that has the same structure and naming as the original data.
 
 # Version
-0.1.1	*released 24-Jun-2015*
+- 0.1.1
+..- released 24-Jun-2015
+
+.. image:: https://img.shields.io/github/license/JoeCora/OJ_Break-python.svg
+
+.. image:: https://img.shields.io/github/issues/JoeCora/OJ_Break-python.svg
+
+.. image:: https://img.shields.io/pypi/v/oj_break.svg?style=flat
+  :target: https://pypi.python.org/pypi/oj_break
+
+.. image:: https://img.shields.io/travis/JoeCora/OJ_Break-python.svg?style=flat
+  :target: https://travis-ci.org/JoeCora/OJ_Break-python
+
 
 # Requirements
 - Python 2.7+
