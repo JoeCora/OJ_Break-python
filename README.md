@@ -10,10 +10,10 @@ dictionary that has the same structure and naming as the original data.
 - 0.1.1
 ··- released 24-Jun-2015
 
-[![license][https://img.shields.io/github/license/JoeCora/OJ_Break-python.svg]]
-[![issues][https://img.shields.io/github/issues/JoeCora/OJ_Break-python.svg]]
-[![pypi][https://img.shields.io/pypi/v/oj_break.svg][https://pypi.python.org/pypi/oj_break]]
-[![travis ci][https://img.shields.io/travis/JoeCora/OJ_Break-python.svg][https://travis-ci.org/JoeCora/OJ_Break-python]]
+[![license](https://img.shields.io/github/license/JoeCora/OJ_Break-python.svg)]
+[![issues](https://img.shields.io/github/issues/JoeCora/OJ_Break-python.svg)]
+[![pypi](https://img.shields.io/pypi/v/oj_break.svg)](https://pypi.python.org/pypi/oj_break)
+[![travis ci](https://img.shields.io/travis/JoeCora/OJ_Break-python.svg)](https://travis-ci.org/JoeCora/OJ_Break-python)
 
 
 # Requirements
