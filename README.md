@@ -8,7 +8,7 @@ dictionary that has the same structure and naming as the original data.
 
 # Version
 - 0.1.1
-··* released 24-Jun-2015
+  - released 24-Jun-2015
 
 ![license](https://img.shields.io/github/license/JoeCora/OJ_Break-python.svg)
 ![issues](https://img.shields.io/github/issues/JoeCora/OJ_Break-python.svg)
